@@ -1,0 +1,13 @@
+\newcommand{\experienceItem}[5]{%
+    \resumeSubheading
+      {#1}{#2 -- #3}
+      {#4}{#5}
+      \resumeItemListStart
+        % Loop through job tasks and create individual items
+        \begin{itemize}
+        <% exp.jobtask.forEach(task => { %>
+            \resumeItem {<%- task %>}
+        <% }); %>
+        \end{itemize}
+      \resumeItemListEnd
+}
